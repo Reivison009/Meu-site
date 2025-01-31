@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reivison - Bio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .header {
+      font-size: 2.8em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(15, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .container {
+      max-width: 600px;
+      background: rgba(30, 30, 30, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 20px rgba(0, 184, 255, 0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #00b8ff;
+    }
+
+    p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #00b8ff;
+      font-weight: bold;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .links a {
+      background: linear-gradient(90deg, #0073e6, #00b8ff);
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .links a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+    }
+
+    .links a:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      font-size: 0.9em;
+      background: rgba(30, 30, 30, 0.8);
+      border-radius: 8px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        font-size: 2.2em;
+      }
+      .container {
+        padding: 20px;
+      }
+      .links a {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="header">Olá, eu sou <span class="typing"></span></h1>
+
+  <div class="container">
+    <h2>Sobre Mim</h2>
+    <p>Sou <span class="highlight">Reivison</span>, apaixonado por tecnologia e desenvolvimento.</p>
+    <p>Adoro criar, explorar e inovar no mundo da programação.</p>
+
+    <div class="links">
+      <a href="#">💬 Meu Discord</a>
+      <a href="#">🎥 Meu YouTube</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Reivison. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const text = "Reivison";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.querySelector('.typing').textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 150);
+      } else {
+        document.querySelector('.typing').style.borderRight = "none"; // Remove a barra piscante no final
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
