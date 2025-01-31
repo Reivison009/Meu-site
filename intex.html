@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reivison - Bio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1 class="header">Olá, eu sou <span class="typing"></span></h1>
+
+  <div class="container">
+    <h2>Sobre Mim</h2>
+    <p>Olá, me chamo <span class="highlight">Reivison</span>, gosto muito de programar e desenvolver.</p>
+    <p>Adoro criar, explorar e inovar no mundo da programação. Tenho <span class="highlight">13</span> anos e estou sempre em busca de aprender mais!</p>
+
+    <div class="links">
+      <h3>Meus Links</h3>
+      <a href="https://discord.gg/eTEb4gzbdz">💬 Discord</a>
+      <a href="https://youtube.com/@reivison009?si=S6oMiDUR2ruEn9YX">🎥 YouTube</a>
+      <a href="https://www.tiktok.com/@reivison0090?_t=ZM-8tWDN3tYaPd&_r=1">🎶 TikTok</a>
+    </div>
+
+    <div class="other-links">
+      <h3>Créditos</h3>
+      <a href="https://kauam73.github.io/kauam/perfil.html" class="simple-link">Kauam (Dono)</a>
+      <a href="#" class="simple-link">-</a>
+      <a href="#" class="simple-link">-</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Reivison. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const text = "Reivison";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.querySelector('.typing').textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 190);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
