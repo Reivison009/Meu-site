@@ -19,18 +19,10 @@ body {
   justify-content: center;
 }
 
-header.header-container {
+.header-container {
   display: flex;
-  align-items: center;  /* Alinha a imagem e o título verticalmente */
+  align-items: center;
   justify-content: center;
-  gap: 20px;  /* Espaço entre a imagem e o título */
-}
-
-.guide-img {
-  width: 80px;  /* Largura da imagem */
-  height: 80px; /* Altura da imagem */
-  border-radius: 50%;  /* Tornar a imagem redonda */
-  object-fit: cover;  /* A imagem não vai distorcer */
 }
 
 .header {
@@ -103,9 +95,8 @@ p {
   box-shadow: 0 0 10px rgba(0, 184, 255, 0.6);
 }
 
-/* Estilo corrigido para os botões de crédito */
 .simple-link {
-  background: #252525; /* Cor mais visível */
+  background: #252525;
   color: #fff;
   text-decoration: none;
   padding: 12px 20px;
