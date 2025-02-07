@@ -1,58 +1,136 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reivison - Bio</title>
-  <link rel="stylesheet" href="styles.css"> 
-  <!-- Link para Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
-  <div class="header-container">
-    <h1 class="header">Olá, eu sou <span class="typing"></span></h1>
-  </div>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-  <div class="container">
-    <h2>Sobre Mim</h2>
-    <p>Olá, me chamo <span class="highlight">Reivison</span>, gosto muito de programar e desenvolver.</p>
-    <p>Adoro criar, explorar e inovar no mundo da programação. Tenho <span class="highlight">13</span> anos e estou sempre em busca de aprender mais!</p>
+body {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    <div class="links">
-      <h3>Meus Links</h3>
-      <!-- Usando ícones do Font Awesome -->
-      <a href="https://discord.gg/eTEb4gzbdz"><i class="fab fa-discord"></i> Discord</a>
-      <a href="https://youtube.com/@reivison009?si=S6oMiDUR2ruEn9YX"><i class="fab fa-youtube"></i> YouTube</a>
-      <a href="https://www.tiktok.com/@reivison0090?_t=ZM-8tWDN3tYaPd&_r=1"><i class="fab fa-tiktok"></i> TikTok</a>
-    </div>
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    <div class="other-links">
-      <h3>Créditos</h3>
-      <a href="https://kauam73.github.io/kauam/perfil.html" class="simple-link">Kauam (Dono)</a>
-      <a href="#" class="simple-link">-</a>
-      <a href="#" class="simple-link">-</a>
-    </div>
-  </div>
+.header {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
-  <footer>
-    © 2025 Reivison. Todos os direitos reservados.
-  </footer>
+.typing::after {
+  content: '|';
+  display: inline-block;
+  animation: blink 0.6s infinite;
+}
 
-  <script>
-    const text = "Reivison";
-    let index = 0;
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
-    function typeEffect() {
-      if (index < text.length) {
-        document.querySelector('.typing').textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 190);
-      }
-    }
+.container {
+  max-width: 700px;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 184, 255, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease-in-out;
+  margin-top: 30px;
+}
 
-    typeEffect();
-  </script>
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #00b8ff;
+}
 
-</body>
-</html>
+p {
+  font-size: 1.1em;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #00b8ff;
+  font-weight: bold;
+}
+
+.links, .other-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.links a, .other-links a {
+  background: linear-gradient(90deg, #0073e6, #00b8ff);
+  color: white;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.links a:hover, .other-links a:hover {
+  background: #00b8ff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(0, 184, 255, 0.6);
+}
+
+.simple-link {
+  background: #252525;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.simple-link:hover {
+  background: #444;
+  color: #00b8ff;
+  box-shadow: 0 0 5px rgba(0, 184, 255, 0.6);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 0.9em;
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .header {
+    font-size: 2em;
+  }
+  .container {
+    padding: 20px;
+  }
+  .links a, .other-links a {
+    font-size: 1em;
+  }
+}
