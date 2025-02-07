@@ -19,7 +19,7 @@ body {
   justify-content: center;
 }
 
-.header-container {
+header.header-container {
   display: flex;
   align-items: center;  /* Alinha a imagem e o título verticalmente */
   justify-content: center;
@@ -27,8 +27,8 @@ body {
 }
 
 .guide-img {
-  width: 100px;  /* Largura da imagem */
-  height: 100px; /* Altura da imagem */
+  width: 80px;  /* Largura da imagem */
+  height: 80px; /* Altura da imagem */
   border-radius: 50%;  /* Tornar a imagem redonda */
   object-fit: cover;  /* A imagem não vai distorcer */
 }
