@@ -87,6 +87,7 @@ p {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .links a:hover, .other-links a:hover {
@@ -107,11 +108,12 @@ p {
   text-align: center;
   transition: all 0.3s ease;
   display: inline-block;
+  z-index: 1;
 }
 
 .simple-link:hover {
   background: #444;
-  color: #00b8ff;
+  color: #00b8ff !important;
   box-shadow: 0 0 5px rgba(0, 184, 255, 0.6);
 } 
 
