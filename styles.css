@@ -93,6 +93,7 @@ p {
   background: #00b8ff;
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(0, 184, 255, 0.6);
+  color: white !important; /* Garante que o texto não desapareça */
 }
 
 .simple-link {
@@ -112,7 +113,7 @@ p {
   background: #444;
   color: #00b8ff;
   box-shadow: 0 0 5px rgba(0, 184, 255, 0.6);
-}
+} 
 
 footer {
   margin-top: 40px;
