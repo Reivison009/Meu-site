@@ -118,6 +118,24 @@ footer {
   opacity: 0.8;
 }
 
+/* Estilo para a imagem guia */
+.guide-image {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.guide-img {
+  width: 100%;
+  max-width: 600px; /* Ajuste o tamanho máximo */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+.guide-image p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
 @media (max-width: 600px) {
   .header {
     font-size: 2em;
