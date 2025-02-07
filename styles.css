@@ -19,6 +19,20 @@ body {
   justify-content: center;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;  /* Alinha a imagem e o título verticalmente */
+  justify-content: center;
+  gap: 20px;  /* Espaço entre a imagem e o título */
+}
+
+.guide-img {
+  width: 100px;  /* Largura da imagem */
+  height: 100px; /* Altura da imagem */
+  border-radius: 50%;  /* Tornar a imagem redonda */
+  object-fit: cover;  /* A imagem não vai distorcer */
+}
+
 .header {
   font-size: 2.5em;
   font-weight: bold;
@@ -116,24 +130,6 @@ footer {
   background: rgba(30, 30, 30, 0.8);
   border-radius: 8px;
   opacity: 0.8;
-}
-
-/* Estilo para a imagem guia */
-.guide-image {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.guide-img {
-  width: 100%;
-  max-width: 600px; /* Ajuste o tamanho máximo */
-  border-radius: 8px; /* Adiciona bordas arredondadas */
-}
-
-.guide-image p {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #555;
 }
 
 @media (max-width: 600px) {
