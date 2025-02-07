@@ -31,9 +31,14 @@ body {
   margin-top: 20px;
 }
 
-.typing::after {
-  content: '|';
-  display: inline-block;
+.typing {
+  font-weight: bold;
+  color: #00b8ff;
+}
+
+.cursor {
+  color: #00b8ff;
+  font-weight: bold;
   animation: blink 0.6s infinite;
 }
 
@@ -85,37 +90,13 @@ p {
   font-size: 1.2em;
   font-weight: bold;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
 
 .links a:hover, .other-links a:hover {
   background: #00b8ff;
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(0, 184, 255, 0.6);
-  color: white !important; /* Garante que o texto não desapareça */
 }
-
-.simple-link {
-  background: #252525;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s ease;
-  display: inline-block;
-  z-index: 1;
-}
-
-.simple-link:hover {
-  background: #444;
-  color: #00b8ff !important;
-  box-shadow: 0 0 5px rgba(0, 184, 255, 0.6);
-} 
 
 footer {
   margin-top: 40px;
